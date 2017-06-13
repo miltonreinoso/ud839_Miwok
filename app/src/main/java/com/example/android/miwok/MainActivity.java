@@ -94,5 +94,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(phrasesIntent);
             }
         });
+
+        // Find the View that shows the animals category
+        TextView animals = (TextView) findViewById(R.id.animals);
+
+        // Set a click listener on that View
+        animals.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the animals category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link AnimalsActivity}
+                Intent animalsIntent = new Intent(MainActivity.this, AnimalsActivity.class);
+
+                // Stat the activity
+                startActivity(animalsIntent);
+            }
+        });
+
+
     }
 }
